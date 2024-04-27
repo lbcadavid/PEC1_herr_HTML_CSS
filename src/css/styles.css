@@ -1,0 +1,611 @@
+/* MAIN CSS - Todos los dispositivos */
+
+@charset "utf-8";
+
+:root{
+    --negro-o:#000000;
+    --blanco-o:#FFFFFF;
+    --negro-c:#3F403E;
+    --gris-o:#7D807C;
+    --gris-c:#BBC0BA;
+ }
+
+/* Estilos Básicos */
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--negro-o);
+    color: var(--blanco-o);
+}
+
+.content {
+    flex-grow: 1;
+    margin: 0 auto; 
+    max-width: 1200px; 
+    padding: 20px;
+}
+
+.active {
+    background-color: var(--gris-o);
+    color: var(--blanco-o);
+}
+
+h2 {
+    color: var(--negro-c);
+    font-size: 30px;
+    font-weight: bold;
+}
+
+h3 {
+    color: var(--negro-c);
+    font-size: 24px; 
+}
+
+h4 {
+    color: var(--negro-c);
+    font-size: 20px;
+    margin: 0;
+}
+
+p {
+    color: var(--negro-o);
+    font-size: 22px;
+    text-align: justify;
+}
+
+.portada {
+    color: var(--negro-o);
+    text-align: center;
+    font-size: 30px;
+}
+
+/* 1.Footer */
+
+footer {
+    background-color: var(--negro-o);
+    color: var(--blanco-o);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+footer > div {
+    flex: 1 1 300px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+footer > div:last-child {
+    flex: 0 0 100%;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin-bottom: 5px;
+}
+
+footer ul li a {
+    color: var(--blanco-o);
+    text-decoration: none; 
+    text-align: left;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    margin: 0;
+    color: var(--blanco-o);
+    text-align: center;
+}
+
+/* 2.*/
+
+.main-content {
+    flex-grow: 1;
+    background-image: url('../images/fondo.png');
+    background-size: cover;
+    background-position: center; 
+    padding: 50px 0;
+}
+
+div .div-ajustado {
+    width: 100%; 
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+
+/* Estilos para el menú responsive */
+
+.cajaNav {
+    font-family: sans-serif;
+    display:flex;
+    justify-content: space-between;
+    background: var(--negro-o);
+    color: var(--blanco-o);
+ }
+
+ .cajaNav .barNav {
+    margin:0 10px 0 0;
+ }
+
+ .cajaNav .titNav {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex: 1;
+    color:var(--blanco-o);
+    height: 6vh;
+    margin-left: 50px;
+ }
+
+ .cajaNav .titNav .toggle {
+    display:none;
+ }
+
+ .cajaNav .titNav .logo {
+    margin: 10px 10px;
+ }
+
+ .cajaNav .titNav .logo img {
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+ }
+
+ .cajaNav .barNav {
+    display:flex;
+    list-style:none;
+    align-items: center;
+    padding:0;
+    margin-right: 75px;
+ }
+
+ .cajaNav .barNav li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    height: 100%;
+ }
+ 
+ .cajaNav .barNav li:hover {
+    background:  var(--gris-o);
+    color:var(--blanco-o);
+    cursor: pointer;
+ }
+
+ .cajaNav .barNav li a {
+    display: flex; 
+    align-items: center;
+    width: 100%; 
+    height: 100%; 
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+    line-height: inherit; 
+ }
+
+ /* 4*/
+
+ #content-title {
+    text-align: center;
+    font-size: 28px;
+    color: #000000;
+    width: 80%;
+    max-width: 650px;
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+}
+
+.content-text {
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.button-container {
+    margin-top: 20px;
+}
+
+.button {
+    display: inline-block;
+    background-color: var(--gris-o);
+    color: var(--blanco-o);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: var(--gris-c);
+}
+
+/* 5. Presentación */
+
+.col-container, .col-container-right {
+    display: flex;
+}
+
+.col-container p {
+    flex: 1;
+    margin-right: 80px;
+    margin-top: 0;
+}
+
+.col-container-right p {
+    flex: 1;
+    margin-left: 80px;
+    margin-top: 0;
+}
+
+.col-container figure {
+    flex: 1;
+    max-width: 100%;
+    max-width: 35%;
+    height: auto;
+    margin: 0;
+}
+
+.col-container figure img {
+    width: 95%;
+    height: 100%;
+}
+
+.col-container-right figure {
+    flex: 1;
+    max-width: 100%;
+    max-width: 45vh;
+    height: 25vh;
+    margin: 0;
+}
+
+.col-container-right figure iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.content-presentacion {
+    flex-grow: 1;
+    margin: 0 auto; 
+    max-width: 1200px; 
+    padding: 20px;
+    min-height: 90vh;
+}
+
+/* 6. Documentación y enlaces */
+
+.content-enlaces {
+    min-height: 88vh;
+}
+
+.content-enlaces p {
+    margin-bottom: 10px;
+}
+
+.content-enlaces ul {
+    list-style: decimal-leading-zero;
+    font-size: 20px;
+    padding-left: 150px;
+}
+
+.content-enlaces ul li {
+    margin-bottom: 15px;
+}
+
+.content-enlaces ul li a {
+    font-size: 20px;
+    color: #007bff;
+}
+
+/* 7. Categoría */
+
+.content-categoria {
+    min-height: 88vh;
+}
+
+.row {
+    margin-bottom: 0px;
+    margin-top: 0;
+}
+
+.columns {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.columns .text-content  {
+    flex: 1;
+    margin-right: 80px;
+}
+
+.columns .text-content p {
+    margin-top: 0;
+}
+
+.columns iframe {
+    flex: 1;
+    width: 100%;
+    height: 315px;
+}
+
+.columns img {
+    flex: 1;
+    max-width: 100%;
+    max-width: 35%;
+    height: auto;
+}
+
+.columns .discs {
+    flex: 1;
+    max-width: 100%;
+    max-width: 30%;
+    height: auto;
+}
+
+.text-content {
+    padding-right: 10px;
+    text-align: justify;
+}
+
+.text-content a {
+    font-size: 18;
+    display: inline-block;
+    text-align: center;
+}
+
+.more-detail-btn {
+    background-color: var(--gris-o); 
+    color: var(--blanco-o); 
+    border: none;
+    border-radius: 20px; /* Borde redondo */
+    padding: 8px 16px; /* Espacio interno */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transición suave al pasar el mouse */
+}
+
+.more-detail-btn:hover {
+    background-color: var(--gris-c);
+}
+
+.album-list {
+    list-style-type: disc;
+    padding: 0;
+    padding-left: 20px ;
+}
+
+.album-list li {
+    margin-bottom: 20px;
+}
+
+.album-list li a {
+    text-decoration: none; 
+    color: #007bff;
+    display: block;
+    padding-left: 15px;
+}
+
+.album-list li a:hover {
+    text-decoration: underline; 
+}
+
+
+
+.columns .tours {
+    flex: 1;
+    max-width: 100%;
+    max-width: 50%;
+    height: auto;
+}
+
+.tour-list {
+    list-style-type: none;
+}
+
+.tour-list li {
+    font-size: 18px;
+    margin-bottom: 15px ;
+}
+
+.columns .text-content-right {
+    padding-right: 10px;
+    text-align: justify;
+    flex: 1;
+    margin-left: 20px;
+}
+
+/* Tamaño para dispositivos móviles (hasta 767px de ancho) */
+@media only screen and (max-width: 767px) {
+
+    /* Estilos Básicos */
+
+    .content {
+        padding: 20px;
+        margin-top: 20px;
+    }   
+
+    .cajaNav{
+        flex-direction: column;
+        align-items:flex-end;
+        background: var(--negro-o);
+    }
+
+    .cajaNav .barNav {
+        color: var(--blanco-o);
+        background: var(--negro-o); 
+        flex-direction:column;
+        display:none;
+        margin-right: 32px;
+    }
+
+    .cajaNav .barNav li {
+        padding: 10px 20px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .cajaNav .barNav li:hover{
+        background: var(--negro-c);
+        color: var(--blanco-o);
+    }
+
+    .cajaNav .titNav{
+        width: 100%;
+        align-items: center;
+    }
+
+    .cajaNav .titNav .toggle{
+        display: block;
+        margin-right: 30px;
+        cursor: pointer
+
+    }
+
+    .abierto{
+        display:flex !important
+    }
+
+    .cerrado{
+        display:none !important
+    }
+
+    .active {
+        background-color: var(--negro-o);
+        color: var(--blanco-o);
+    }
+
+    /* 1.Footer */
+
+    footer > div {
+        flex-basis: 100%;
+    }
+
+    .social-links {
+        display: none;
+    }
+
+    .useful-links {
+        display: none;
+    }
+
+    footer h3 {
+        font-size: 18px; 
+        margin-bottom: 5px;
+        margin-top: 5px;
+        color: var(--blanco-c);
+    }
+
+
+    .col-container, .col-container-right {
+        flex-direction: column; 
+    }
+    
+    .col-container p,
+    .col-container figure {
+        margin: 0;
+        margin-top: 5px;
+        max-width: 100%;
+    }
+
+    .col-container-right p,
+    .col-container-right figure {
+        margin: 0;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        max-width: 100%;
+    }
+
+    /* 6. Documentación y enlaces */
+
+    .content-enlaces ul {
+        list-style: decimal-leading-zero;
+        font-size: 20px;
+        padding-left: 30px;
+    }
+
+    .columns {
+        flex-direction: column; 
+    }
+
+    .columns .tours {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .columns .text-content {
+        padding: 0px;
+        margin: 0;
+    }
+
+    .columns .text-content a {
+        margin-bottom: 15PX;
+    }
+
+    .columns .discs {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .columns .text-content-right {
+        padding: 0px;
+        margin: 0;
+        text-align: justify;
+    }
+
+    .columns img {
+        height: 100%;
+        max-width: 100%;
+    }
+
+}
+/* Tamaño para tablets (768px a 1023px de ancho) */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+    /* Estilos Básicos */
+
+    .content {
+        padding: 15px; 
+    }
+
+    footer h3 {
+        font-size: 18px; 
+        margin-bottom: 5px;
+        margin-top: 5px;
+        color: var(--blanco-c);
+    }
+}
+
+/* Tamaño para dispositivos de escritorio (más de 1024px de ancho) */
+@media only screen and (min-width: 1024px) {
+
+    footer {
+        padding-right: 200px;
+        padding-left: 200px; 
+    }
+
+    footer h3 {
+        font-size: 20px; 
+        margin-bottom: 15px;
+        margin-top: 25px;
+        color: var(--blanco-c);
+    }
+}
