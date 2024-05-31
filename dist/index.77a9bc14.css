@@ -1,3 +1,4 @@
+@import "https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap";
 :root {
   --negro-o: #000;
   --blanco-o: #fff;
@@ -104,7 +105,8 @@ footer p {
 }
 
 .main-content {
-  background-image: url("fondo.0d6d5d8b.png");
+  clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+  background-image: url("fondo.8ee4f386.jpeg");
   background-position: center;
   background-size: cover;
   flex-grow: 1;
@@ -132,7 +134,6 @@ div .div-ajustado {
 .cajaNav .titNav {
   color: var(--blanco-o);
   flex: 1;
-  justify-content: space-between;
   align-items: center;
   height: 6vh;
   margin-left: 50px;
@@ -234,10 +235,10 @@ div .div-ajustado {
   margin-right: 80px;
 }
 
-.col-container-right p {
+.col-container-right div {
   flex: 1;
   margin-top: 0;
-  margin-left: 80px;
+  padding-left: 50px;
 }
 
 .col-container figure {
@@ -249,7 +250,7 @@ div .div-ajustado {
 
 .col-container figure img {
   width: 95%;
-  height: 100%;
+  height: 90%;
 }
 
 .col-container-right figure {
@@ -313,7 +314,6 @@ div .div-ajustado {
 
 .columns .text-content {
   flex: 1;
-  margin-right: 80px;
 }
 
 .columns .text-content p {
@@ -406,8 +406,20 @@ div .div-ajustado {
 }
 
 @media only screen and (width <= 767px) {
+  .main-content {
+    clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+    background-image: url("fondo-760px.507a6374.jpeg");
+    background-position: center;
+    background-size: cover;
+    flex-grow: 1;
+    padding: 50px 0;
+  }
+
+  footer p {
+    font-size: 15px;
+  }
+
   .content {
-    margin-top: 20px;
     padding: 20px;
   }
 
@@ -447,6 +459,10 @@ div .div-ajustado {
     display: block;
   }
 
+  .cajaNav .titNav {
+    justify-content: space-between;
+  }
+
   .abierto {
     display: flex !important;
   }
@@ -472,7 +488,7 @@ div .div-ajustado {
     color: var(--blanco-c);
     margin-top: 5px;
     margin-bottom: 5px;
-    font-size: 18px;
+    font-size: 15px;
   }
 
   .col-container, .col-container-right {
@@ -528,6 +544,82 @@ div .div-ajustado {
     max-width: 100%;
     height: 100%;
   }
+
+  .logo-footer img {
+    padding-top: 5px !important;
+  }
+
+  .contact-info {
+    margin-bottom: 0;
+  }
+
+  .button-container a {
+    font-size: 15px;
+  }
+
+  .portada {
+    font-size: 20px;
+  }
+
+  .content-presentacion p {
+    margin: 0;
+    font-size: 15px;
+  }
+
+  .content-presentacion h2 {
+    margin: 2.5px 0;
+    font-size: 19px;
+  }
+
+  .content-presentacion h3 {
+    margin: 2.5px 0;
+    font-size: 18px;
+  }
+
+  figure {
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+    display: flex;
+  }
+
+  figure img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px;
+  }
+
+  .col-container figure img {
+    width: 60%;
+    height: auto;
+  }
+
+  figure figcaption {
+    text-align: center;
+  }
+
+  .col-container-right div {
+    padding-left: 0;
+  }
+
+  .content-categoria p {
+    margin: 0;
+    font-size: 15px;
+  }
+
+  .content-categoria h2 {
+    margin: 2.5px 0;
+    font-size: 19px;
+  }
+
+  .content-categoria h3 {
+    margin: 2.5px 0;
+    font-size: 18px;
+  }
+
+  .columns .discografia {
+    padding: 0 !important;
+  }
 }
 
 @media only screen and (width >= 768px) and (width <= 1023px) {
@@ -540,6 +632,10 @@ div .div-ajustado {
     margin-top: 5px;
     margin-bottom: 5px;
     font-size: 18px;
+  }
+
+  .texto-logo {
+    padding: 20px;
   }
 }
 
@@ -555,5 +651,92 @@ div .div-ajustado {
     margin-bottom: 15px;
     font-size: 20px;
   }
+}
+
+.texto-logo {
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(to right, #00f, orange);
+  -webkit-background-clip: text;
+  align-items: center;
+  padding-left: 20px;
+  font-family: Metal Mania, cursive;
+  font-size: 36px;
+  text-decoration: none;
+  display: flex;
+}
+
+.logo-texto {
+  align-items: flex-start;
+  display: flex;
+}
+
+.logo-footer img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 55px;
+  height: 55px;
+  padding-top: 15px;
+}
+
+.fondoOscuro {
+  background-color: var(--negro-o);
+}
+
+#rotate-icon {
+  width: 50px;
+  height: 50px;
+  margin: 20px auto;
+  animation: 2s linear infinite rotate;
+  display: block;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.image-link {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.columns .image-link {
+  flex: 1;
+  max-width: 100%;
+  height: auto;
+}
+
+.columns .image-link img {
+  height: auto;
+  max-width: 60% !important;
+}
+
+.clickable-image {
+  cursor: pointer;
+  width: 100%;
+  height: auto;
+  transition: transform .3s, box-shadow .3s;
+}
+
+.clickable-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px #0003;
+}
+
+.columns .discografia {
+  padding-right: 50px;
+}
+
+.img-principal {
+  margin-bottom: 30px;
+  margin-left: 0;
+  margin-right: 0;
 }
 /*# sourceMappingURL=index.77a9bc14.css.map */

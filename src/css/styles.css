@@ -2,6 +2,9 @@
 
 @charset "utf-8";
 
+/* Url de estilos de letra */
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+
 :root{
     --negro-o:#000000;
     --blanco-o:#FFFFFF;
@@ -115,9 +118,10 @@ footer p {
 
 .main-content {
     flex-grow: 1;
-    background-image: url('../images/fondo.png');
+    background-image: url('../images/fondo.jpeg');
     background-size: cover;
-    background-position: center; 
+    background-position: center;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
     padding: 50px 0;
 }
 
@@ -143,7 +147,6 @@ div .div-ajustado {
 
  .cajaNav .titNav {
     display:flex;
-    justify-content:space-between;
     align-items:center;
     flex: 1;
     color:var(--blanco-o);
@@ -250,9 +253,9 @@ div .div-ajustado {
     margin-top: 0;
 }
 
-.col-container-right p {
+.col-container-right div {
     flex: 1;
-    margin-left: 80px;
+    padding-left: 50px;
     margin-top: 0;
 }
 
@@ -266,7 +269,7 @@ div .div-ajustado {
 
 .col-container figure img {
     width: 95%;
-    height: 100%;
+    height: 90%;
 }
 
 .col-container-right figure {
@@ -335,7 +338,6 @@ div .div-ajustado {
 
 .columns .text-content  {
     flex: 1;
-    margin-right: 80px;
 }
 
 .columns .text-content p {
@@ -435,12 +437,24 @@ div .div-ajustado {
 
 /* Tamaño para dispositivos móviles (hasta 767px de ancho) */
 @media only screen and (max-width: 767px) {
+    
+    .main-content {
+        flex-grow: 1;
+        background-image: url('../images/fondo-760px.jpeg');
+        background-size: cover;
+        background-position: center;
+        clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+        padding: 50px 0;
+    }
+
+    footer p {
+        font-size: 15px;
+    }
 
     /* Estilos Básicos */
 
     .content {
         padding: 20px;
-        margin-top: 20px;
     }   
 
     .cajaNav{
@@ -480,6 +494,10 @@ div .div-ajustado {
 
     }
 
+    .cajaNav .titNav {
+        justify-content:space-between;
+     }
+
     .abierto{
         display:flex !important
     }
@@ -508,7 +526,7 @@ div .div-ajustado {
     }
 
     footer h3 {
-        font-size: 18px; 
+        font-size: 15px; 
         margin-bottom: 5px;
         margin-top: 5px;
         color: var(--blanco-c);
@@ -576,6 +594,99 @@ div .div-ajustado {
         max-width: 100%;
     }
 
+    /* Estilos PEC 2 */
+
+    /* Cambios imagen */
+
+    .logo-footer img {
+        padding-top:  5px !important ;
+    }
+
+    .contact-info {
+        margin-bottom: 0px;
+    }
+
+    /* Cambios portada */
+
+    .button-container a {
+        font-size: 15px;
+    }
+
+    .portada {
+        font-size: 20px;
+    }
+
+    /* Cambios Presentacion */
+
+    .content-presentacion p {
+        font-size: 15px;
+        margin: 0;
+    }
+
+    .content-presentacion h2 {
+        font-size: 19px;
+        margin: 0;
+        margin-bottom: 2.5px;
+        margin-top: 2.5px;
+    }
+
+    .content-presentacion h3 {
+        font-size: 18px;
+        margin: 0;
+        margin-bottom: 2.5px;
+        margin-top: 2.5px;
+    }
+
+    figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px 0;
+    }
+
+    figure img {
+        margin: 10px;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .col-container figure img {
+        width: 60%;
+        height: auto;
+    }
+
+    figure figcaption {
+        text-align: center;
+    }
+
+    .col-container-right div {
+        padding-left: 0px;
+    }
+
+    /* Cambios en categoría */
+
+    .content-categoria p {
+        font-size: 15px;
+        margin: 0;
+    }
+
+    .content-categoria h2 {
+        font-size: 19px;
+        margin: 0;
+        margin-bottom: 2.5px;
+        margin-top: 2.5px;
+    }
+
+    .content-categoria h3 {
+        font-size: 18px;
+        margin: 0;
+        margin-bottom: 2.5px;
+        margin-top: 2.5px;
+    }
+
+    .columns .discografia {
+        padding: 0px !important;
+    }
 }
 /* Tamaño para tablets (768px a 1023px de ancho) */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
@@ -591,6 +702,10 @@ div .div-ajustado {
         margin-bottom: 5px;
         margin-top: 5px;
         color: var(--blanco-c);
+    }
+
+    .texto-logo {
+        padding: 20px;
     }
 }
 
@@ -608,4 +723,102 @@ div .div-ajustado {
         margin-top: 25px;
         color: var(--blanco-c);
     }
+}
+
+/* Estilos PEC 2 */
+
+/* Correcion Icono y texto */
+
+.texto-logo {
+    text-decoration: none;          
+    padding-left: 20px;    
+    align-items: center;      
+    display: flex; 
+    font-family: 'Metal Mania', cursive; 
+    font-size: 36px;               
+    background: linear-gradient(to right, blue, orange); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+}
+
+.logo-texto {
+    display: flex;
+    align-items: flex-start;
+}
+
+.logo-footer img {
+    padding-top: 15px;
+    width: 55px;
+    height: 55px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* fondoOscuro */
+
+.fondoOscuro {
+    background-color: var(--negro-o);
+}
+
+/* logo presentacion */
+
+#rotate-icon {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: 20px auto;
+    animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Cambios de Categoría */
+
+.image-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.columns .image-link {
+    flex: 1;
+    max-width: 100%;
+    height: auto;
+}
+
+.columns .image-link img {
+    max-width: 60% !important;
+    height: auto;
+}
+
+.clickable-image {
+    width: 100%; 
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.clickable-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.columns .discografia {
+    padding-right: 50px;
+}
+
+/* Detalle */
+
+.img-principal  {
+    margin-bottom: 30px; 
+    margin-left: 0px; 
+    margin-right: 0px;
 }
